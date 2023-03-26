@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+    body 
+    {
+        background-image: url("Main_Image/Powr_bkg.jpg");
+        font-size: 16px;
+        color: white;
+
+    }
+    h1
+    {
+        color:bisque;
+        font-size: 50px;
+    }
+</style>
+<body>
+    <table>
+        <tr><td><h1>Your Personalized Results:</h1></td></tr>
+        <tr>
+            <td colspan="3">
+                <textarea id="inputTextToSave" cols="80" rows="25"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>Find the Results File:</td>
+            <td><input type="file" id="fileToLoad"></td>
+            <td><button onclick="loadFileAsText()">Load Your Results</button><td>
+        </tr>
+    </table>
+    <script type="text/javascript">
+        function destroyClickedElement(event)
+        {
+            document.body.removeChild(event.target);
+        }
+ 
+        function loadFileAsText()
+        {
+            var fileToLoad = document.getElementById("fileToLoad").files[0];
+            var fileReader = new FileReader();
+            fileReader.onload = function(fileLoadedEvent) 
+            {
+                var textFromFileLoaded = fileLoadedEvent.target.result;
+                document.getElementById("inputTextToSave").value = textFromFileLoaded;
+            };
+            fileReader.readAsText(fileToLoad, "UTF-8");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Powr Survey</title>
+  <link rel="stylesheet" type="text/css" href="./surveystyle.css" />
+  <script src="surveyscript.js"></script>
+  
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 id="title" class="text-center">Powr Home Efficiency Survey</h1>
+      <p id="description" class="description text-center">
+        Please answer all the questions to get accurate results
+      </p>
+    </header>
+
+    <!-- Question 1 -->
+      <div class="form-group">
+        <p>1. Do you live in a rental property or a bought property?</p>
+        <label>
+          <input
+            name="property"
+            value="a"
+            type="radio"
+            class="input-radio"
+          />I live on a rental property</label
+        >
+        <label>
+          <input
+            name="property" 
+            value="b"
+            type="radio"
+            class="input-radio"
+          />I bought my property</label
+        >
+      </div>
+
+      <!-- Question 2 -->
+      <div class="form-group">
+        <p>2. How much are you willing/able to spend?</p>
+        <label>
+          <input
+            name="spend"
+            value="a"
+            type="radio"
+            class="input-radio"
+          />Less than $100</label
+        >
+        <label>
+          <input
+            name="spend"
+            value="b"
+            type="radio"
+            class="input-radio"
+          />$100-$500</label
+        >
+        <label>
+          <input
+            name="spend"
+            value="c"
+            type="radio"
+            class="input-radio"
+          />$500-$2000</label
+        >
+        <label>
+          <input
+            name="spend"
+            value="d"
+            type="radio"
+            class="input-radio"
+          />$2000+</label
+        >
+      </div>
+
+      <!-- Question 3 -->
+      <div class="form-group">
+        <p>3. How old is your residence?</p>
+        <label>
+          <input
+            name="propage"
+            value="a"
+            type="radio"
+            class="input-radio"
+          />Less than 15 years old</label
+        >
+        <label>
+          <input
+            name="propage"
+            value="b"
+            type="radio"
+            class="input-radio"
+          />More than 15 years old</label
+        >
+      </div>
+
+      <!-- Question 4 -->
+      <div class="form-group">
+        <p>4. How old are your appliances?</p>
+        <label>
+          <input
+            name="appage"
+            value="a"
+            type="radio"
+            class="input-radio"
+          />Less than 15 years old</label
+        >
+        <label>
+          <input
+            name="appage"
+            value="b"
+            type="radio"
+            class="input-radio"
+          />15 years old or older</label
+        >
+      <!-- Question 5 -->
+      <div class="form-group">
+        <p>5. What is the average monthly amount you pay for your electricity bill?</p>
+        <label>
+          <input
+            name="bill"
+            value="a"
+            type="radio"
+            class="input-radio"
+          />Less than $75</label
+        >
+        <input
+            name="bill"
+            value="b"
+            type="radio"
+            class="input-radio"
+          />$75=$100</label
+        >
+        <input
+            name="bill"
+            value="c"
+            type="radio"
+            class="input-radio"
+          />$100=$125</label
+        >
+        <input
+            name="bill"
+            value="d"
+            type="radio"
+            class="input-radio"
+          />$125-$150</label
+        >
+        <input
+            name="bill"
+            value="d"
+            type="radio"
+            class="input-radio"
+          />$150-$175</label
+        >
+        <input
+            name="bill"
+            value="e"
+            type="radio"
+            class="input-radio"
+          />Above $175</label
+        >
+      </div>  
+      <div class="form-group">
+        <button type="submit" id="submit" onclick="getAns()" class="submit-button">
+          Submit
+        </button>
+      </div>
+      <div class="form-group">
+        <button type="submit" id="submit" class="submit-button">
+          <a href="results.html">View Your Results</a>
+        </button>
+      </div>
+      <div class="form-group"> 
+        <button><a href="surveytest.html" >Reset Survey</a></button>
+      </div>
+  </div>
+  <p id="demo"></p>
+</body>
+</html>

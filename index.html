@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home: Powr</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="./index.js"></script>
+    <style>
+        body 
+        {
+            background-image: url("Main_Image/Powr_bkg.jpg");
+            font-size: 16px;
+            color: white;
+
+        }
+        h1
+        {
+            color:bisque;
+            font-size: 50px;
+        }
+        /* Company Name on our website's font */
+        p
+        {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        /*Top right filler*/
+        .ourMessage 
+        { 
+            float: right;
+            font-size: 20px;
+            font-family: 'Serif', Lucida-Bright; 
+            width: calc(100% - 40%); 
+        } 
+        
+        /* All Buttons; remaain consistent */
+        .button {
+          border: 2px solid #045a76;
+          color: white;
+          padding: 16px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          transition-duration: 0.4s;
+          cursor: pointer;
+          border-radius: 12px;
+          width: 24%;
+          background-color: transparent;
+        }
+        a:link, a:visited {
+            background-color: transparent;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        a:hover, a:active {
+            background-color: white;
+            color: black;
+        }
+        /* All buttons when the mouse is hovering */
+        .button:hover {
+          background-color: #def7ff;
+          color: black;
+        }
+        /*Collapsible Button*/
+        .collapsible {
+            background-color: transparent;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: 1px;
+            text-align: center;
+            outline: none;
+            font-size: 15px;
+        }
+        .active, .collapsible:hover {
+            background-color: #555;
+        }
+        .content {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #5a5757;
+        }
+    </style>
+</head>
+<body>
+    <!--Logo Image on the top left corner-->
+    <img src="Main_Image/Powr Logo.png" alt="Powr Logo" width="40%">
+    <!--Welcome Message to fill up the page on the top right corner-->
+    
+    <!--Four Main Buttons-->
+    <p><br></p>
+    <a href="surveytest.html" target="_blank" >Begin Our Survey </a>
+    <button class="button">Electritians Near You</button>
+    <button class="button">10 Day Lab Instructions</button>
+    <button class="button">Feedback and Contact</button>
+    <a href="https://www.cnet.com/pictures/here-are-23-ways-to-save-on-your-electric-bills-right-now/" target="_blank" >External Source</a>
+    <!--Banner Image-->
+    <img src="Main_Image/Powr Banner.png" alt="University Banner" width="100%" height="300px">
+    <!--Collapsible Buttons: Quick messages-->
+    <button class="collapsible">Our Initiative</button>
+    <div class="content">
+        <p> 
+            Our goal is to make people knowledgeable about ways that they can have a more sustainable household. 
+            We understand that different people have different living situations, so not 
+            everyone can do everything, but we want to demonstrate that everybody can do 
+            something. Small changes that are wide-spread across a community can have a big impact and 
+            we want to show that everyone can make an impact that fits their lifestyle.  
+        </p>
+    </div>
+    <button class="collapsible">Our Approach</button>
+    <div class="content">
+        <p> 
+            Using your responses from our survey, we will generate a list of suggestions that will
+            help decrease your energy usage, saving our planet and your wallet! Every suggestion is 
+            personalized for your house and your energy usage. 
+        </p>
+    </div>
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            } 
+          });
+        }
+</script>
+
+</body>
+
+</html>
