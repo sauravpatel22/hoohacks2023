@@ -20,7 +20,7 @@ During the hackathon, we learned the different components of a website(front and
 Most websites with offer functionality and expirence large traffic are hosted through the cloud, use APIs to transition from front end and back end, etc. If we want to achieve a similar structure with our project, all three of us would need to learn the basics of hosting websites on the cloud, hosting/running servers, using react, etc.
 
 ## What's next for Powr
-1. Functionality: Make sure the user can get results in a timely manner with the click of one button
+1. Functionality: Make sure the user can get results in a timely manner with the click of one button. This includes hosting it on the server side.
 2. Determine and work on a more specific algorithm, to give the user even better results
 3. Do more research on what causes energy waste and the solutions to those problems
 4. Re-route users to useful sites based on their response, whether it is a service or a blog post
